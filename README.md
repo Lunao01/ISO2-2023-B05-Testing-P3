@@ -1,5 +1,5 @@
 | Integrantes |
 | :--: |
-| Noelia Díaz-Alejo Alejo |
-| Samuel Espejo Gil |
+| Francisco Javier Luna Ortiz |
+| Marcelo Chinarro Cabrero |
 
