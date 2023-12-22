@@ -8,26 +8,8 @@ package test.iso.b05;
 
 class BodiesEqualPositionException extends RuntimeException {
 
-    /*Constructores*/
-    public BodiesEqualPositionException() {
-    }
-
+    /*Constructor*/
     public BodiesEqualPositionException(String message) {
         super(message);
-    }
-
-    public BodiesEqualPositionException(String message, Throwable cause) {
-        super(message, cause);
-    }
-
-    public BodiesEqualPositionException(Throwable cause) {
-        super(cause);
-    }
-
-    public BodiesEqualPositionException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
-        super(message, cause, enableSuppression, writableStackTrace);
-    }
-    
-
-     
+    }  
 }

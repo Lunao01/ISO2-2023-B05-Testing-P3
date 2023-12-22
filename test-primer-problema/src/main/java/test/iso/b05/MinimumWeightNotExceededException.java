@@ -8,26 +8,8 @@ package test.iso.b05;
 
 class MinimumWeightNotExceededException extends RuntimeException {
 
-    /*Constructores*/
-    public MinimumWeightNotExceededException() {
-    }
-
+    /*Constructor*/
     public MinimumWeightNotExceededException(String message) {
         super(message);
     }
-
-    public MinimumWeightNotExceededException(String message, Throwable cause) {
-        super(message, cause);
-    }
-
-    public MinimumWeightNotExceededException(Throwable cause) {
-        super(cause);
-    }
-
-    public MinimumWeightNotExceededException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
-        super(message, cause, enableSuppression, writableStackTrace);
-    }
-    
-
-     
 }
