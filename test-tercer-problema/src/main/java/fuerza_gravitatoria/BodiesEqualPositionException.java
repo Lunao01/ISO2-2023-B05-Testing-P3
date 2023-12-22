@@ -1,4 +1,4 @@
-package test.iso.b05;
+package fuerza_gravitatoria;
 
 /**
 *   Class Name: BodiesEqualPositionException                           
@@ -6,7 +6,7 @@ package test.iso.b05;
 *   punto del plano (imposible).                                            
 */
 
-class BodiesEqualPositionException extends RuntimeException {
+public class BodiesEqualPositionException extends RuntimeException {
 
     /*Constructor*/
     public BodiesEqualPositionException(String message) {

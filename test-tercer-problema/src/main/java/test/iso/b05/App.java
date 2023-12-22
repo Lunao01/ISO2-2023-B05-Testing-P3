@@ -7,6 +7,11 @@ import user.cli.Input;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+import fuerza_gravitatoria.BodiesEqualPositionException;
+import fuerza_gravitatoria.Cuerpo;
+import fuerza_gravitatoria.FuerzaGravitatoria;
+import fuerza_gravitatoria.MinimumWeightNotExceededException;
+
 
 
 /**

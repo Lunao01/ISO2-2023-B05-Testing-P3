@@ -1,4 +1,4 @@
-package test.iso.b05;
+package fuerza_gravitatoria;
 
 /**
 *   Class Name: FuerzaGravitatoria                                     

@@ -2,6 +2,9 @@ package test.iso.b05;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.function.Executable;
+
+import fuerza_gravitatoria.FuerzaGravitatoria;
+import fuerza_gravitatoria.Cuerpo;
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
@@ -21,6 +24,18 @@ public class AppTest
         
         double distancia = -100000;
         
+        Cuerpo a = new Cuerpo("a", peso_a, 0, 0, 0);
+        Cuerpo b = new Cuerpo("b", peso_b, 0, 0, 0);
+        
+        a.getPeso();
+        a.getId();
+        a.getPos_x();
+        a.getPos_y();
+        a.getPos_z();
+        a.toString();
+        
+        //double resultado = FuerzaGravitatoria.calcular_fuerza_gravitatoria(peso_a, peso_b, distancia);
+        
         
     }
     
@@ -35,6 +50,10 @@ public class AppTest
         
         double distancia = 200000;
         
+        Cuerpo a = new Cuerpo("a", peso_a, 0, 0, 0);
+        Cuerpo b = new Cuerpo("b", peso_b, 0, 0, 0);
+        
+        //double resultado = FuerzaGravitatoria.calcular_fuerza_gravitatoria(peso_a, peso_b, distancia);
     }
     
     @Test
@@ -47,6 +66,11 @@ public class AppTest
         double peso_b = Double.MIN_VALUE - 1;
         
         double distancia = 0;
+        
+        Cuerpo a = new Cuerpo("a", peso_a, 0, 0, 0);
+        Cuerpo b = new Cuerpo("b", peso_b, 0, 0, 0);
+        
+        //double resultado = FuerzaGravitatoria.calcular_fuerza_gravitatoria(peso_a, peso_b, distancia);
         
     }
     
@@ -61,6 +85,11 @@ public class AppTest
         
         double distancia = -1;
         
+        Cuerpo a = new Cuerpo("a", peso_a, 0, 0, 0);
+        Cuerpo b = new Cuerpo("b", peso_b, 0, 0, 0);
+        
+        //double resultado = FuerzaGravitatoria.calcular_fuerza_gravitatoria(peso_a, peso_b, distancia);
+        
     }
     
     @Test
@@ -73,6 +102,11 @@ public class AppTest
         double peso_b = -100;
         
         double distancia = 1;
+        
+        Cuerpo a = new Cuerpo("a", peso_a, 0, 0, 0);
+        Cuerpo b = new Cuerpo("b", peso_b, 0, 0, 0);
+        
+        //double resultado = FuerzaGravitatoria.calcular_fuerza_gravitatoria(peso_a, peso_b, distancia);
         
     }
     
@@ -87,6 +121,10 @@ public class AppTest
         
         double distancia = Double.MIN_VALUE;
         
+        Cuerpo a = new Cuerpo("a", peso_a, 0, 0, 0);
+        Cuerpo b = new Cuerpo("b", peso_b, 0, 0, 0);
+        
+        //double resultado = FuerzaGravitatoria.calcular_fuerza_gravitatoria(peso_a, peso_b, distancia);
     }
     
     @Test
@@ -99,6 +137,11 @@ public class AppTest
         double peso_b = 1289000000;
         
         double distancia = Double.MAX_VALUE;
+        
+        Cuerpo a = new Cuerpo("a", peso_a, 0, 0, 0);
+        Cuerpo b = new Cuerpo("b", peso_b, 0, 0, 0);
+        
+        //double resultado = FuerzaGravitatoria.calcular_fuerza_gravitatoria(peso_a, peso_b, distancia);
         
     }
     
@@ -113,6 +156,11 @@ public class AppTest
         
         double distancia = Double.MIN_VALUE - 1;
         
+        Cuerpo a = new Cuerpo("a", peso_a, 0, 0, 0);
+        Cuerpo b = new Cuerpo("b", peso_b, 0, 0, 0);
+        
+        //double resultado = FuerzaGravitatoria.calcular_fuerza_gravitatoria(peso_a, peso_b, distancia);
+        
     }
     
     @Test
@@ -125,6 +173,11 @@ public class AppTest
         double peso_b = 100000;
         
         double distancia = Double.MAX_VALUE + 1;
+        
+        Cuerpo a = new Cuerpo("a", peso_a, 0, 0, 0);
+        Cuerpo b = new Cuerpo("b", peso_b, 0, 0, 0);
+        
+        double resultado = FuerzaGravitatoria.calcular_fuerza_gravitatoria(peso_a, peso_b, distancia);
         
     }
     
@@ -139,6 +192,11 @@ public class AppTest
         
         double distancia = 1;
         
+        Cuerpo a = new Cuerpo("a", peso_a, 0, 0, 0);
+        Cuerpo b = new Cuerpo("b", peso_b, 0, 0, 0);
+        
+        //double resultado = FuerzaGravitatoria.calcular_fuerza_gravitatoria(peso_a, peso_b, distancia);
+        
     }
     
     @Test
@@ -151,6 +209,11 @@ public class AppTest
         double peso_b = 1;
         
         double distancia = -1;
+        
+        Cuerpo a = new Cuerpo("a", peso_a, 0, 0, 0);
+        Cuerpo b = new Cuerpo("b", peso_b, 0, 0, 0);
+        
+        //double resultado = FuerzaGravitatoria.calcular_fuerza_gravitatoria(peso_a, peso_b, distancia);
         
     }
     
@@ -165,6 +228,10 @@ public class AppTest
         
         double distancia = 0;
         
+        Cuerpo a = new Cuerpo("a", peso_a, 0, 0, 0);
+        Cuerpo b = new Cuerpo("b", peso_b, 0, 0, 0);
+        
+        //double resultado = FuerzaGravitatoria.calcular_fuerza_gravitatoria(peso_a, peso_b, distancia);
     }
     
     @Test
@@ -177,6 +244,11 @@ public class AppTest
         double peso_b = 100001;
         
         double distancia = 0;
+        
+        Cuerpo a = new Cuerpo("a", peso_a, 0, 0, 0);
+        Cuerpo b = new Cuerpo("b", peso_b, 0, 0, 0);
+        
+        double resultado = FuerzaGravitatoria.calcular_fuerza_gravitatoria(peso_a, peso_b, distancia);
         
     }
     
@@ -193,6 +265,11 @@ public class AppTest
         double by = Double.MAX_VALUE + 1;
         double bz = 1;
         
+        Cuerpo a = new Cuerpo("a", 100000, ax, ay, az);
+        Cuerpo b = new Cuerpo("b", 100000, bx, by, bz);
+        
+        double resultado = FuerzaGravitatoria.calcular_distancia(ax, ay, az, bx, by, bz);
+        
     }
     
     @Test
@@ -207,6 +284,8 @@ public class AppTest
         double bx = 0;
         double by = -1;
         double bz = 1;
+        
+        double resultado = FuerzaGravitatoria.calcular_distancia(ax, ay, az, bx, by, bz);
         
     }
     
@@ -223,6 +302,11 @@ public class AppTest
         double by = Double.MAX_VALUE;
         double bz = 0;
         
+        Cuerpo a = new Cuerpo("a", 100000, ax, ay, az);
+        Cuerpo b = new Cuerpo("b", 100000, bx, by, bz);
+        
+        double resultado = FuerzaGravitatoria.calcular_distancia(ax, ay, az, bx, by, bz);
+        
     }
     
     @Test
@@ -237,6 +321,11 @@ public class AppTest
         double bx = Double.MAX_VALUE + 1;
         double by = Double.MIN_VALUE;
         double bz = 200000;
+        
+        Cuerpo a = new Cuerpo("a", 100000, ax, ay, az);
+        Cuerpo b = new Cuerpo("b", 100000, bx, by, bz);
+        
+        double resultado = FuerzaGravitatoria.calcular_distancia(ax, ay, az, bx, by, bz);
         
     }
     
@@ -253,6 +342,11 @@ public class AppTest
         double by = 1;
         double bz = -100000;
         
+        Cuerpo a = new Cuerpo("a", 100000, ax, ay, az);
+        Cuerpo b = new Cuerpo("b", 100000, bx, by, bz);
+        
+        double resultado = FuerzaGravitatoria.calcular_distancia(ax, ay, az, bx, by, bz);
+        
     }
     
     @Test
@@ -267,6 +361,11 @@ public class AppTest
         double bx = 200000;
         double by = -1;
         double bz = Double.MAX_VALUE + 1;
+        
+        Cuerpo a = new Cuerpo("a", 100000, ax, ay, az);
+        Cuerpo b = new Cuerpo("b", 100000, bx, by, bz);
+        
+        double resultado = FuerzaGravitatoria.calcular_distancia(ax, ay, az, bx, by, bz);
         
     }
     
@@ -283,6 +382,10 @@ public class AppTest
         double by = 0;
         double bz = Double.MIN_VALUE - 1;
         
+        Cuerpo a = new Cuerpo("a", 100000, ax, ay, az);
+        Cuerpo b = new Cuerpo("b", 100000, bx, by, bz);
+        
+        double resultado = FuerzaGravitatoria.calcular_distancia(ax, ay, az, bx, by, bz);
     }
     
     @Test
@@ -298,6 +401,10 @@ public class AppTest
         double by = 200000;
         double bz = Double.MAX_VALUE;
         
+        Cuerpo a = new Cuerpo("a", 100000, ax, ay, az);
+        Cuerpo b = new Cuerpo("b", 100000, bx, by, bz);
+        
+        double resultado = FuerzaGravitatoria.calcular_distancia(ax, ay, az, bx, by, bz);
     }
     
     @Test
@@ -312,6 +419,11 @@ public class AppTest
         double bx = 1;
         double by = -100000;
         double bz = Double.MIN_VALUE;
+        
+        Cuerpo a = new Cuerpo("a", 100000, ax, ay, az);
+        Cuerpo b = new Cuerpo("b", 100000, bx, by, bz);
+        
+        double resultado = FuerzaGravitatoria.calcular_distancia(ax, ay, az, bx, by, bz);
         
     }
    

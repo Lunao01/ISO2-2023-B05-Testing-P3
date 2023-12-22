@@ -1,4 +1,4 @@
-package test.iso.b05;
+package fuerza_gravitatoria;
 
 /**
 *   Class Name: MinimumWeightNotExceededException                           
@@ -6,7 +6,7 @@ package test.iso.b05;
 *   masa.                                                        
 */
 
-class MinimumWeightNotExceededException extends RuntimeException {
+public class MinimumWeightNotExceededException extends RuntimeException {
 
     /*Constructor*/
     public MinimumWeightNotExceededException(String message) {
