@@ -5,20 +5,20 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>test.iso.b05</groupId>
-  <artifactId>test-primer-problema</artifactId>
+  <artifactId>test-tercer-problema</artifactId>
   <version>1.0-SNAPSHOT</version>
 
   <packaging>jar</packaging>
 
-  <name>test-primer-problema</name>
-  <url>http://github.com/RedBed24/ISO2-2023-B05-Testing-P1</url>
+  <name>test-tercer-problema</name>
+  <url>http://github.com/Lunao01/ISO2-2023-B05-Testing-P3</url>
 
   <developers>
     <developer>
-      <name>Samuel Espejo Gil</name>
+      <name>Francisco Javier Luna Ortiz (Paco Moon)</name>
     </developer>
     <developer>
-      <name>Noelia Díaz-Alejo Alejo</name>
+      <name>Marcelo Chinarro Cabrero</name>
     </developer>
   </developers>
 
