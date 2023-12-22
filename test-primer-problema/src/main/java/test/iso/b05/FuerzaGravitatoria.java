@@ -16,7 +16,7 @@ public class FuerzaGravitatoria {
     public static double calcular_fuerza_gravitatoria(double peso_a, double peso_b, double distancia)throws MinimumWeightNotExceededException{
         double peso_min = 100000; //Peso mínimo establecido a 100000 toneladas
         if(peso_min > peso_a || peso_min > peso_b){
-            throw new MinimumWeightNotExceededException("Error, los cuerpos deben superar una masa mínima de 100.000 toneladas.");
+            throw new MinimumWeightNotExceededException("Error, los cuerpos deben superar una masa mínima de 100.000 toneladas. ");
         }
         
         double resultado = G*(((peso_a*1000)*(peso_b*1000))/Math.pow( distancia * (3.084*Math.pow(10,16)),2));
