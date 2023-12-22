@@ -1,15 +1,13 @@
 package test.iso.b05;
 
+import java.io.PrintStream;
 import user.cli.Input;
 
-import java.util.List;
-import java.util.Arrays;
-import java.io.PrintStream;
-import java.util.Scanner;
-import java.time.Period;
-import java.time.LocalDate;
 
-import persona.*;
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+
 
 /**
  * Hello world!
@@ -17,46 +15,65 @@ import persona.*;
  */
 public class App
 {
+    
 	public static void main(String[] args)
 	{
-		Input in = new Input(new Scanner(System.in), new PrintStream(System.out));
+	    /*Módulo para gestionar la entrada de datos*/
+	    Input in = new Input(new Scanner(System.in), new PrintStream(System.out));
+	    
+	    /*Variables*/
+	    Cuerpo a, b;
+	    boolean seguir = true;
 
-		Period mayoria_edad;
-		do {
-			System.out.println("Introduzca la mayoria de edad en años:");
-			mayoria_edad = Period.ofYears(in.getInt());
-			if (mayoria_edad.isNegative()) {
-				System.out.println("Se debe introducir un número de años positivo");
-			}
-		} while (mayoria_edad.isNegative());
+	    /*Introducción del servicio al cliente*/
+	    System.out.println("########################################################");
+	    System.out.println("#          CALCULADORA DE FUERZA GRAVITATORIA          #");
+	    System.out.println("########################################################");
+	    System.out.println("<--(Programa enfocado a cuerpos celestes)-->");
+	    try{/*Se captura excepción por si el usuario inserta valores no válidos (strings)*/
+		/*Valores para cuerpo 1*/
+		System.out.println("Valores para cuerpo 1:");
+		a = getNewCuerpo(in, "Cuerpo 1");
 
-		List<Nacionalidad> nacionalidades_europeas = Arrays.asList(
-			Nacionalidad.PORTUGUES,
-			Nacionalidad.ESPANOL,
-			Nacionalidad.FRANCES,
-			Nacionalidad.ITALIANO
-		);
+		/*Valores para cuerpo 2*/
+		System.out.println("Valores para cuerpo 2:");
+		b = getNewCuerpo(in, "Cuerpo 2");
 
-		List<TitulacionEducativa> titulaciones_doctorado = Arrays.asList(
-			TitulacionEducativa.DOCTORADO,
-			TitulacionEducativa.MASTER
-		);
+		/*Se calcula la fuerza gravitatoria*/
+		double distancia = FuerzaGravitatoria.calcular_distancia(a.getPos_x(), a.getPos_y(), a.getPos_z(), b.getPos_x(), b.getPos_y(), b.getPos_z());
+		System.out.println("\nResultado: " + FuerzaGravitatoria.calcular_fuerza_gravitatoria(a.getPeso(), b.getPeso(), distancia) + " (N).");
 
-		GestorPersonas gp = new GestorPersonas(mayoria_edad, nacionalidades_europeas, titulaciones_doctorado);
+	    }catch(InputMismatchException e){
+		System.out.println("Error: Entrada de valor no válido.");
+	    }catch(BodiesEqualPositionException e){
+		System.out.println("Error: Cuerpos situados en las mismas coordenadas (x,y,z) del plano.");
+	    }catch(MinimumWeightNotExceededException e){
+		System.out.println("Error: Los cuerpos no superan una masa mínima de 100000 toneladas.");
+	    }
+	    System.out.println("\n###############     FIN DEL PROGRAMA     ###############");
+	    System.out.println("########################################################");
+	}//End of main
+	
+	
+	/*Pedir valores para crear una clase Cuerpo*/
+	private static Cuerpo getNewCuerpo(Input in, String id){
+	   /*Variables*/
+	   double masa, x, y, z;
 
-		Persona p1 = new Persona("Samuel", "Espejo Gil", LocalDate.of(2003, 6, 2), Nacionalidad.ESPANOL, TitulacionEducativa.ESO, CEFRLevel.B1, 622668849, "samuel.espejo@alu.uclm.es");
-		Persona p2 = new Persona(
-			in.getString(),
-			in.getString(),
-			in.getDate(),
-			Nacionalidad.fromString(in.getString()),
-			TitulacionEducativa.fromString(in.getString()),
-			CEFRLevel.fromString(in.getString()),
-			in.getPhoneNumber(),
-			in.getMail()
-		);
+	   /*Se piden los valores*/
+	    System.out.println("Masa del cuerpo (Mg (tonelada)):");
+	    masa = in.getPositiveDouble();
 
-		gp.esEuropea(p1.getNacionalidad());
-		gp.esMayorEdad(p2.getFechaNacimiento());
+	    System.out.println("Posición X del cuerpo (parsec):");
+	    x = in.getDouble();
+
+	    System.out.println("Posición Y del cuerpo (parsec):");
+	    y = in.getDouble();
+
+	    System.out.println("Posición Z del cuerpo (parsec):");
+	    z = in.getDouble();
+
+	    return new Cuerpo(id, masa, x, y, z);
+
 	}
 }
