@@ -19,7 +19,7 @@ public class FuerzaGravitatoria {
             throw new MinimumWeightNotExceededException("Error, los cuerpos deben superar una masa mínima de 100.000 toneladas.");
         }
         
-        double resultado = G*((peso_a *peso_b)/(Math.pow(distancia * (3.084 * Math.pow(10,16)), 2)));
+        double resultado = G*(((peso_a*1000)*(peso_b*1000))/Math.pow( distancia * (3.084*Math.pow(10,16)),2));
                 
         return resultado;
     }
