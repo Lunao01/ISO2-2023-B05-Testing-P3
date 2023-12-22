@@ -10,7 +10,7 @@ import java.util.Scanner;
 
 
 /**
- * Hello world!
+ * Clase App para ejecutar el proyecto.
  *
  */
 public class App
@@ -23,7 +23,6 @@ public class App
 	    
 	    /*Variables*/
 	    Cuerpo a, b;
-	    boolean seguir = true;
 
 	    /*Introducción del servicio al cliente*/
 	    System.out.println("########################################################");
@@ -61,9 +60,11 @@ public class App
 	   double masa, x, y, z;
 
 	   /*Se piden los valores*/
+	   //Masa del cuerpo
 	    System.out.println("Masa del cuerpo (Mg (tonelada)):");
 	    masa = in.getPositiveDouble();
-
+	    
+	    //Coordenadas dentro del plano
 	    System.out.println("Posición X del cuerpo (parsec):");
 	    x = in.getDouble();
 
